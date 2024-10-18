@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color: black;
+    padding: 16px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.display {
+    width: 100%;
+    margin-top: 16px;
+    padding: 8px;
+    background-color: #2d3748;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-red {
+    background-color: #e53e3e;
+    color: white;
+    border-radius: 9999px;
+    padding: 8px;
+}
+
+.btn-purple {
+    background-color: #805ad5;
+    color: white;
+    border-radius: 9999px;
+    padding: 8px;
+}
+
+.btn-gray {
+    background-color: #4a5568;
+    color: white;
+    border-radius: 9999px;
+    padding: 8px;
+}
+
+.btn-green {
+    background-color: #38a169;
+    color: white;
+    border-radius: 9999px;
+    padding: 8px;
+}
+
+/* Light Mode Styles */
+.light-mode .calculator {
+    background-color: white;
+}
+
+.light-mode .display {
+    background-color: #edf2f7;
+    color: black;
+}
+
+.light-mode .btn-gray {
+    background-color: #cbd5e0;
+    color: #2b6cb0;
+}
+
+.light-mode .btn-purple {
+    background-color: #c3dafe;
+    color: #2c5282;
+}

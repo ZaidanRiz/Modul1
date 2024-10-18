@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5e9db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #34C759;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(51, 49, 49, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+        }
+
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"] {
+            padding: 6px;
+            border-radius: 8px;
+            border: 1px solid #b8a6a6;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: black;
+            color: rgb(254, 254, 254);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Form Pendaftaran</h2>
+    <form id="form">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="alamat">Alamat Lengkap</label>
+        <input type="text" id="alamat" name="alamat">
+        
+        <button type="button" onclick="validateForm()">Daftar</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        const alamat = document.getElementById('alamat').value;
+
+        if (nama === '' || email === '' || alamat === '') {
+            alert("Semua data harus diisi.");
+            return false;
+        } else {
+            alert("Pendaftaran berhasil!");
+        }
+    }
+</script>
+
+</body>
+</html>

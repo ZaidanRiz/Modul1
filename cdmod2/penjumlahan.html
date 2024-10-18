@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjumlahan</title>
+    <style>
+        /* Optional CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .calculator input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 1.2em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .calculator button.reset {
+            background-color: #f44336;
+        }
+        .result {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Penjumlahan</h2>
+        <label for="bilangan1">Bilangan pertama</label>
+        <input type="number" id="bilangan1" value="1">
+        <label for="bilangan2">Bilangan kedua</label>
+        <input type="number" id="bilangan2" value="2">
+        <div>
+            <button onclick="hitung()">Jumlahkan</button>
+            <button class="reset" onclick="reset()">Reset</button>
+        </div>
+        <p class="result">Hasil: <span id="hasil">0</span></p>
+    </div>
+
+    <script>
+        function hitung() {
+            var bilangan1 = parseFloat(document.getElementById('bilangan1').value);
+            var bilangan2 = parseFloat(document.getElementById('bilangan2').value);
+            var hasil = bilangan1 + bilangan2;
+            document.getElementById('hasil').innerText = hasil;
+        }
+
+        function reset() {
+            document.getElementById('bilangan1').value = '';
+            document.getElementById('bilangan2').value = '';
+            document.getElementById('hasil').innerText = '0';
+        }
+    </script>
+</body>
+</html>

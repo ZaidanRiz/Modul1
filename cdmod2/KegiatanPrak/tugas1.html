@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator dengan mode Gelap dan Terang</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="text-center">
+        <div class="flex justify-between items-center mb-8">
+            <div class="text-black text-4xl font-bold">DARK</div>
+            <div class="text-black text-4xl font-bold">LIGHT</div>
+        </div>
+        <div class="flex justify-center items-center space-x-8">
+            <!-- Calculator -->
+            <div id="calculator" class="calculator">
+                <div class="toggle" onclick="toggleMode()"></div>
+                <div class="grid grid-cols-4 gap-2 mt-4">
+                    <button class="btn-red" onclick="clearDisplay()">C</button>
+                    <button class="btn-purple" onclick="appendToDisplay('+')">+</button>
+                    <button class="btn-purple" onclick="appendToDisplay('*')">×</button>
+                    <button class="btn-purple" onclick="appendToDisplay('/')">÷</button>
+                    <button class="btn-gray" onclick="appendToDisplay('7')">7</button>
+                    <button class="btn-gray" onclick="appendToDisplay('8')">8</button>
+                    <button class="btn-gray" onclick="appendToDisplay('9')">9</button>
+                    <button class="btn-purple" onclick="appendToDisplay('-')">-</button>
+                    <button class="btn-gray" onclick="appendToDisplay('4')">4</button>
+                    <button class="btn-gray" onclick="appendToDisplay('5')">5</button>
+                    <button class="btn-gray" onclick="appendToDisplay('6')">6</button>
+                    <button class="btn-purple" onclick="appendToDisplay('%')">%</button>
+                    <button class="btn-gray" onclick="appendToDisplay('1')">1</button>
+                    <button class="btn-gray" onclick="appendToDisplay('2')">2</button>
+                    <button class="btn-gray" onclick="appendToDisplay('3')">3</button>
+                    <button class="btn-purple" onclick="appendToDisplay('**')">^</button>
+                    <button class="btn-gray" onclick="appendToDisplay('0')">0</button>
+                    <button class="btn-gray" onclick="appendToDisplay('.')">.</button>
+                    <button class="btn-gray" onclick="appendToDisplay('()')">()</button>
+                    <button class="btn-green" onclick="calculateResult()">=</button>
+                </div>
+                <input type="text" id="display" class="display" readonly>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
